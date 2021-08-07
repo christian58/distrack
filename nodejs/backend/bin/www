@@ -1,0 +1,116 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('distrack-services:server');
+var http = require('http');
+var constants = require('../common/constants');
+
+global.config = constants.config;
+global.configlog = constants.configlog;
+global.constants = constants.constantsvalues;
+global.tables = constants.tables;
+
+// Establecer variable para entorno de desarrollo
+global.config.ENV_DEV = true;
+// Establecer el sistema operativo para grabar logs
+//global.configlog.so = global.constants.WINDOWS;
+global.configlog.pathapp = app.get('path') + global.configlog.pathapp;
+global.configlog.patherror = app.get('path') + global.configlog.patherror;
+
+/**
+ * Initialize log4js first, so we don't miss any log messages
+ */
+
+var log4js = require('log4js');
+var configLog = require('../config/log4js');
+
+log4js.configure(configLog);
+var log = log4js.getLogger('startup');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || global.config.port);
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port, global.config.ipserver, function() {
+    log.log('Servidor web inciado con puerto %s ...', port);
+    if (global.config.ENV_DEV) { console.info('Servidor web inciado: http://%s:%s', global.config.ipserver, port); }
+});
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+    var port = parseInt(val, 10);
+
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
+
+    if (port >= 0) {
+        // port number
+        return port;
+    }
+
+    return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+    if (error.syscall !== 'listen') {
+        throw error;
+    }
+
+    var bind = typeof port === 'string' ?
+        'Pipe ' + port :
+        'Port ' + port;
+
+    // handle specific listen errors with friendly messages
+    switch (error.code) {
+        case 'EACCES':
+            console.error(bind + ' requires elevated privileges');
+            process.exit(1);
+            break;
+        case 'EADDRINUSE':
+            console.error(bind + ' is already in use');
+            process.exit(1);
+            break;
+        default:
+            throw error;
+    }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+    var addr = server.address();
+    var bind = typeof addr === 'string' ?
+        'pipe ' + addr :
+        'port ' + addr.port;
+    debug('Listening on ' + bind);
+}

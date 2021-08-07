@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Distrack Transportista</string>
+
+    <string name="loginHintUsuario">Usuario</string>
+    <string name="loginHintClave">Contraseña</string>
+    <string name="loginHintBoton">INGRESAR</string>
+    <string name="loginTitulo">Login</string>
+    <string name="loginAyuda">Manual de Uso</string>
+
+    <string name="title_activity_tareas">TareasActivity</string>
+    <string name="title_home">Refrescar</string>
+    <string name="title_notifications">Salir</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fragment 1</string>
+    <string name="hello_blank_fragment2">Fragment 2</string>
+
+
+    <string name="labelclientecardviewtarea">Cliente:</string>
+    <string name="labeldocumentocardviewtarea">Documento:</string>
+    <string name="labelvolumencardviewtarea">Valor:</string>
+    <string name="labelpesocardviewtarea">Peso:</string>
+    <string name="labeldireccioncardviewtarea">Dirección:</string>
+    <string name="labelplanillacardviewtarea">Cond.Pago:</string>
+
+</resources>

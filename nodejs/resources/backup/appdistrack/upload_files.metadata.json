@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"appdistrack.upload_files"},{"v":1,"key":{"idusuario":1},"name":"idusuario_1","ns":"appdistrack.upload_files","background":true},{"v":1,"key":{"idRelation":1},"name":"idRelation_1","ns":"appdistrack.upload_files","background":true}]}

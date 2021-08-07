@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelclientecardviewtarea"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textocelestecardviewtareas" />
+
+                <TextView
+                    android:id="@+id/tareaCliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margenlabelvalorcardviewtarea"
+                    android:textSize="@dimen/textoblanccardviewtarea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labeldocumentocardviewtarea"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textocelestecardviewtareas" />
+
+                <TextView
+                    android:id="@+id/tareaDocumento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margenlabelvalorcardviewtarea"
+                    android:textSize="@dimen/textoblanccardviewtarea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelvolumencardviewtarea"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textocelestecardviewtareas" />
+
+                <TextView
+                    android:id="@+id/tareaVolumen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margenlabelvalorcardviewtarea"
+                    android:textSize="@dimen/textoblanccardviewtarea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelpesocardviewtarea"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textocelestecardviewtareas" />
+
+                <TextView
+                    android:id="@+id/tareaPeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margenlabelvalorcardviewtarea"
+                    android:textSize="@dimen/textoblanccardviewtarea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labeldireccioncardviewtarea"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textocelestecardviewtareas" />
+
+                <TextView
+                    android:id="@+id/tareaDircliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margenlabelvalorcardviewtarea"
+                    android:textSize="@dimen/textoblanccardviewtarea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelplanillacardviewtarea"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textocelestecardviewtareas" />
+
+                <TextView
+                    android:id="@+id/tareaPlanillla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margenlabelvalorcardviewtarea"
+                    android:textSize="@dimen/textoblanccardviewtarea" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_detalle"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

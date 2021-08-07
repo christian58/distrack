@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="textoblanccardviewtarea">12sp</dimen>
+    <dimen name="textocelestecardviewtareas">16sp</dimen>
+    <dimen name="margenlabelvalorcardviewtarea">4dp</dimen>
+    <dimen name="labeldetalletarea">20sp</dimen>
+    <dimen name="valordetalletarea">16sp</dimen>
+
+
+</resources>
